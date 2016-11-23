@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'bookscraper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'bookscraper (+http://www.scrapingauthority.com)'
+USER_AGENT = 'bookscraper (https://github.com/zseta/bookscraper/)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -24,8 +24,8 @@ ROBOTSTXT_OBEY = True
 ITEM_PIPELINES = {
     'bookscraper.pipelines.BookRatingPipeline': 100,
     'bookscraper.pipelines.StockPipeline': 200,
-    #'bookscraper.pipelines.JsonPipeline': 998,
-    #'bookscraper.pipelines.CsvPipeline': 999
+    'bookscraper.pipelines.JsonPipeline': 998,
+    'bookscraper.pipelines.CsvPipeline': 999
 }
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
