@@ -1,6 +1,5 @@
 
 import scrapy
-from scrapy.loader.processors import MapCompose
 
 
 class BookItem(scrapy.Item):
