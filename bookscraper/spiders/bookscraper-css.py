@@ -8,7 +8,7 @@ from w3lib.html import remove_tags
 
 
 class BookScraperCss(CrawlSpider):
-    name = 'bookscraper'
+    name = 'bookscraper-css'
     start_urls = ['http://books.toscrape.com/']
 
     rules = (
