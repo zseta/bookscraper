@@ -12,8 +12,8 @@ class BookScraperXpath(CrawlSpider):
     start_urls = ['http://books.toscrape.com/']
 
     rules = (
-        Rule(LinkExtractor(restrict_css=".nav-list > li > ul > li > a"), follow=True),
-        Rule(LinkExtractor(restrict_css=".product_pod > h3 > a"), callback="parse_book")
+        Rule(LinkExtractor(restrict_xpath="//ul[@class='nav nav-list']/li/ul/li/a"), follow=True),
+        Rule(LinkExtractor(restrict_xpath="//article[@class='product_pod']/h3/a"), callback="parse_book")
     )
 
     def parse_book(self, response):
